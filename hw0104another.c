@@ -16,13 +16,11 @@ void func02(char *Json,char *key)
             char *ans1=strchr(ans,'"');
             if(ans1)
             {
-                printf("Value: %s\n",strtok(ans1,t));
-                count++;
+                printf("Value:%s\n",strtok(ans1,t));
             }
             else
             {
                 printf("Value: %s\n",strtok(ans,t));
-                count++;
             }
         }
         token=strtok(NULL,s);
