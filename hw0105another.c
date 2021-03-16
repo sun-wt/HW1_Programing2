@@ -116,3 +116,20 @@ char *mystrstr(const char *haystack,const char *neddle)
     }
     return NULL;
 }
+
+char *mystrtok(char *str,const char *delim)
+{
+    char *s=str;
+    str=s+strspn(s,delim);
+    s=str+strcspn(str,delim);
+    if(s==str)
+    {
+        return NULL;
+    }
+    if(*s)
+    {
+        *s='\0';
+        s++;
+    } 
+    return str;
+}
