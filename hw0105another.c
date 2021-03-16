@@ -120,15 +120,15 @@ char *mystrstr(const char *haystack,const char *neddle)
 char *mystrtok(char *str,const char *delim)
 {
     char *s=str;
-    str=s+strspn(s,delim);
-    s=str+strcspn(str,delim);
+    str=s+mystrspn(s,delim);
+    s=str+mystrcspn(str,delim);
     if(s==str)
     {
         return NULL;
     }
     if(*s)
     {
-        *s'\0';
+        *s='\0';
         s++;
     } 
     return str;
