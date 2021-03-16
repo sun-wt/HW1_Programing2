@@ -128,7 +128,7 @@ char *mystrtok(char *str,const char *delim)
     }
     if(*s)
     {
-        *s='\0';
+        *s'\0';
         s++;
     } 
     return str;
